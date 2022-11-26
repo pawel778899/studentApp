@@ -1,3 +1,2 @@
 ﻿# studentApp
-Simple application
-Technology: Spring, Bootstrap
+Simple application. Technology used: Spring, Bootstrap, (MySQL and H2) DB
