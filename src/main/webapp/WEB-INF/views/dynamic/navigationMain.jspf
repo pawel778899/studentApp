@@ -1,3 +1,6 @@
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security"%>
+
+
 <!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -19,13 +22,14 @@
             <span>Home</span></a>
     </li>
 
+    <security:authorize access="hasAnyRole('USER')">
     <!-- Nav Item - Kursanci -->
     <li class="nav-item">
         <a class="nav-link" href='<c:url value="/students"/>'>
             <i class="fas fa-users"></i>
             <span>Kursanci</span></a>
     </li>
-
+    </security:authorize>
     <!-- Nav Item - Kurs -->
     <li class="nav-item">
         <a class="nav-link" href='<c:url value="/"/>'>
